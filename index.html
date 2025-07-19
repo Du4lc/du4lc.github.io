@@ -45,13 +45,32 @@
             max-width: 600px;
         }
 
-        /* Imágenes grandes de gafas */
         .imagenes img {
-            width: 100%; /* Llenar el <a> */
+            width: 100%;
             height: auto;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 10px;
             cursor: pointer;
+        }
+
+        /* Franja descriptiva bajo las imágenes */
+        .descripcion-container {
+            width: 100%;
+            background-color: #ffffff;
+            padding: 40px 20px;
+            box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .descripcion {
+            max-width: 900px;
+            margin: 0 auto;
+            color: #333;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .descripcion strong {
+            font-weight: bold;
         }
     </style>
 </head>
@@ -70,6 +89,21 @@
         <a href="naranja.html" target="_blank">
             <img src="img/naranja.png" alt="gafas Spectra naranjas" />
         </a>
+    </div>
+
+    <!-- Franja con descripción general -->
+    <div class="descripcion-container">
+        <div class="descripcion">
+            <p><strong>Las Spectra</strong> son la fusión perfecta entre funcionalidad deportiva y estética urbana. Diseñadas para destacar, están pensadas para quienes buscan protección visual con un estilo moderno y atrevido, ya sea en la playa, paseando por la ciudad o durante actividades al aire libre.</p>
+
+            <p>Fabricadas en <strong>TR90 ultraligero</strong>, un material conocido por su flexibilidad y resistencia, las Spectra ofrecen un ajuste cómodo durante todo el día. Su diseño envolvente no solo maximiza el campo visual, sino que también protege eficazmente frente al viento, la arena y la radiación solar.</p>
+
+            <p>Las lentes, hechas de <strong>policarbonato de alta calidad</strong>, incluyen <strong>filtro UV400</strong> de protección total contra rayos UVA y UVB, y un <strong>tratamiento antirreflejos</strong> que mejora la visibilidad incluso en condiciones de luz intensa como las del verano.</p>
+
+            <p>Gracias a sus <strong>almohadillas nasales</strong> y terminales de <strong>goma antideslizante</strong>, se mantienen estables incluso con sudor o movimiento, convirtiéndolas en una excelente opción tanto para actividades físicas como para un día relajado bajo el sol.</p>
+
+            <p>Disponibles en versiones como el <strong>verde mate con aire técnico</strong> y el <strong>naranja vibrante de estilo retro-futurista</strong>, las Spectra no son solo gafas: <strong>son una declaración de carácter</strong>.</p>
+        </div>
     </div>
 
 </body>
