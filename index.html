@@ -6,37 +6,45 @@
     <title>Mi web</title>
     <style>
         body {
-            text-align: center; /* Centra todo el contenido por defecto */
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
         }
 
-        /* Logo centrado */
+        /* Logo grande y centrado */
         .logo {
+            width: 90%;         /* Ocupa casi toda la franja */
+            max-width: 1200px;  /* Máximo tamaño */
+            display: block;
             margin: 20px auto;
-            max-width: 150px;
         }
 
-        /* Contenedor para las imágenes */
+        /* Contenedor de imágenes */
         .imagenes {
             display: flex;
-            justify-content: center;  /* Centra las imágenes horizontalmente */
-            gap: 20px;
-            margin-top: 20px;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap; /* Por si en pantallas pequeñas necesitan bajar */
+            padding: 20px;
         }
 
-        /* Imágenes de gafas */
+        /* Imágenes grandes */
         .imagenes img {
-            width: 200px;   /* Ajusta este valor según el tamaño deseado */
-            height: auto;   /* Mantiene proporciones */
+            width: 45%;       /* Casi la mitad cada una */
+            max-width: 600px; /* No se pasan de este tamaño */
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
 
-    <!-- Logo en lugar de "Hola k ase" -->
+    <!-- Logo ancho -->
     <img src="img/logo.png" alt="Logo de la web" class="logo" />
 
-    <!-- Imágenes de productos -->
+    <!-- Gafas grandes -->
     <div class="imagenes">
         <img src="img/verde.png" alt="gafas Spectra verdes" />
         <img src="img/naranja.png" alt="gafas Spectra naranjas" />
