@@ -12,27 +12,36 @@
             background-color: #f4f4f4;
         }
 
-        /* Logo grande y centrado */
-        .logo {
-            width: 90%;         /* Ocupa casi toda la franja */
-            max-width: 1200px;  /* Máximo tamaño */
-            display: block;
-            margin: 20px auto;
+        /* Franja contenedora del logo */
+        .logo-container {
+            width: 100%;
+            height: 22.5vh; /* Aproximadamente la mitad del alto de las imágenes (que son ~45vh) */
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Contenedor de imágenes */
+        /* Logo dentro de la franja */
+        .logo {
+            height: 80%;  /* Ocupa gran parte de la franja en vertical */
+            width: auto;  /* Mantiene la proporción */
+        }
+
+        /* Contenedor de imágenes de gafas */
         .imagenes {
             display: flex;
             justify-content: center;
             gap: 30px;
-            flex-wrap: wrap; /* Por si en pantallas pequeñas necesitan bajar */
+            flex-wrap: wrap;
             padding: 20px;
         }
 
-        /* Imágenes grandes */
+        /* Imágenes grandes de gafas */
         .imagenes img {
-            width: 45%;       /* Casi la mitad cada una */
-            max-width: 600px; /* No se pasan de este tamaño */
+            width: 45%;
+            max-width: 600px;
             height: auto;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             border-radius: 10px;
@@ -41,10 +50,12 @@
 </head>
 <body>
 
-    <!-- Logo ancho -->
-    <img src="img/logo.png" alt="Logo de la web" class="logo" />
+    <!-- Franja con logo centrado -->
+    <div class="logo-container">
+        <img src="img/logo.png" alt="Logo de la web" class="logo" />
+    </div>
 
-    <!-- Gafas grandes -->
+    <!-- Imágenes de las gafas -->
     <div class="imagenes">
         <img src="img/verde.png" alt="gafas Spectra verdes" />
         <img src="img/naranja.png" alt="gafas Spectra naranjas" />
