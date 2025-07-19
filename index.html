@@ -5,19 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mi web</title>
     <style>
+        body {
+            text-align: center; /* Centra todo el contenido por defecto */
+            font-family: Arial, sans-serif;
+        }
+
+        /* Logo centrado */
+        .logo {
+            margin: 20px auto;
+            max-width: 150px;
+        }
+
         /* Contenedor para las imágenes */
         .imagenes {
-            display: flex;       /* Hace que los hijos estén en fila */
-            gap: 10px;           /* Espacio entre imágenes */
-            align-items: center; /* Centra verticalmente las imágenes */
+            display: flex;
+            justify-content: center;  /* Centra las imágenes horizontalmente */
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        /* Imágenes de gafas */
+        .imagenes img {
+            width: 200px;   /* Ajusta este valor según el tamaño deseado */
+            height: auto;   /* Mantiene proporciones */
         }
     </style>
 </head>
 <body>
-    <h1>Hola k ase</h1>
+
+    <!-- Logo en lugar de "Hola k ase" -->
+    <img src="img/logo.png" alt="Logo de la web" class="logo" />
+
+    <!-- Imágenes de productos -->
     <div class="imagenes">
         <img src="img/verde.png" alt="gafas Spectra verdes" />
         <img src="img/naranja.png" alt="gafas Spectra naranjas" />
     </div>
+
 </body>
 </html>
