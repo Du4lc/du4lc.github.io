@@ -2,11 +2,80 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gafas Spectra Naranjas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .logo-container {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            max-height: 80px;
+            width: auto;
+            max-width: 90%;
+        }
+
+        .contenido {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 40px;
+        }
+
+        .contenido img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .descripcion {
+            max-width: 600px;
+            color: #ef6c00; /* naranja */
+        }
+
+        .descripcion h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #ef6c00;
+        }
+
+        .descripcion p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Gafas Spectra Naranjas</h1>
-    <p>Estas gafas son espectaculares en naranja.</p>
-    <img src="img/naranja.png" alt="Gafas naranjas" style="max-width: 100%; height: auto;" />
+
+    <div class="logo-container">
+        <img src="img/logo.png" alt="Logo de la web" class="logo" />
+    </div>
+
+    <div class="contenido">
+        <img src="img/naranja.png" alt="Gafas Spectra Naranjas" />
+        <div class="descripcion">
+            <h2>🟠 Spectra Naranja – Energía solar con estilo retro-futurista</h2>
+            <p>Las <strong>Spectra Naranja</strong> irradian <strong>vitalidad, energía y personalidad</strong>. Su color vibrante y saturado es imposible de ignorar, evocando atardeceres de verano, calidez y una actitud despreocupada con un punto de rebeldía.</p>
+            <p>Ideales para quienes quieren destacar en la playa, en conciertos al aire libre o simplemente al caminar por la ciudad, este modelo combina un diseño llamativo con la misma calidad técnica: protección total UV400, estructura ultraligera y comodidad durante todo el día.</p>
+            <p>La versión naranja es una <strong>celebración del verano</strong> en forma de gafas.</p>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -2,11 +2,79 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Gafas Spectra Verdes</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .logo-container {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            max-height: 80px;
+            width: auto;
+            max-width: 90%;
+        }
+
+        .contenido {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 40px;
+        }
+
+        .contenido img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .descripcion {
+            max-width: 600px;
+            color: #2e7d32; /* verde */
+        }
+
+        .descripcion h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #2e7d32;
+        }
+
+        .descripcion p {
+            line-height: 1.6;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Gafas Spectra Verdes</h1>
-    <p>Estas gafas son espectaculares en verde.</p>
-    <img src="img/verde.png" alt="Gafas verdes" style="max-width: 100%; height: auto;" />
+
+    <div class="logo-container">
+        <img src="img/logo.png" alt="Logo de la web" class="logo" />
+    </div>
+
+    <div class="contenido">
+        <img src="img/verde.png" alt="Gafas Spectra Verdes" />
+        <div class="descripcion">
+            <h2>🟢 Spectra Verde – Frescura técnica con actitud deportiva</h2>
+            <p>El modelo <strong>Spectra Verde</strong> destaca por su acabado <strong>verde mate</strong>, que transmite frescura, precisión y una estética moderna inspirada en la tecnología y el outdoor. Este color sobrio pero distintivo resalta bajo la luz natural y combina perfectamente con ropa deportiva o casual.</p>
+            <p>Diseñadas para quienes valoran la funcionalidad sin sacrificar el estilo, las gafas verdes ofrecen una sensación de ligereza y rendimiento técnico, ideal para paseos al aire libre, actividades junto al mar o escapadas urbanas en días soleados. El tono verde también reduce la fatiga visual, lo que las convierte en una excelente opción para uso prolongado.</p>
+        </div>
+    </div>
+
 </body>
 </html>
