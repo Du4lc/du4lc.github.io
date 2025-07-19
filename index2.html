@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Mi web</title>
     <style>
+        body {
+            margin: 0; /* para eliminar márgenes y que las franjas lleguen a todo el ancho */
+            padding: 0;
+            background-color: #f0f0f0; /* color gris claro para que la franja blanca se note */
+        }
+        h1 {
+            margin: 20px; /* un poco de espacio arriba y abajo */
+        }
         .franja-blanca {
             background-color: white;
-            height: 6cm; /* altura 5-6 cm */
+            height: 226px; /* aproximadamente 6 cm */
             width: 100%;
         }
         .franja-verde {
-            background-color: #004d00; /* verde oscuro */
-            height: 6cm; /* altura 5-6 cm */
+            background-color: #004d00;
+            height: 226px;
             width: 100%;
-        }
-        /* Opcional: eliminar margen del body para que ocupe todo el ancho */
-        body {
-            margin: 0;
         }
     </style>
 </head>
