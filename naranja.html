@@ -1,81 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gafas Spectra Naranjas</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spectra UX-30-N</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f0f0f0;
+    }
 
-        .logo-container {
-            width: 100%;
-            padding: 10px 0;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh;
+    }
 
-        .logo {
-            max-height: 80px;
-            width: auto;
-            max-width: 90%;
-        }
+    .imagen {
+      flex: 2;
+      background-image: url('img/naranja.png');
+      background-size: cover;
+      background-position: center;
+    }
 
-        .contenido {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            gap: 40px;
-        }
+    .info-panel {
+      flex: 1;
+      background-color: #fff;
+      padding: 40px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      color: #FF6A00;
+    }
 
-        .contenido img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    .info-panel h1 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: #FF6A00;
+    }
 
-        .descripcion {
-            max-width: 600px;
-            color: #ef6c00; /* naranja */
-        }
+    .info-panel .price {
+      font-size: 1.5em;
+      color: #111;
+      margin-bottom: 20px;
+    }
 
-        .descripcion h2 {
-            margin-top: 0;
-            font-size: 24px;
-            color: #ef6c00;
-        }
+    .info-panel .short-desc {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
 
-        .descripcion p {
-            line-height: 1.6;
-            font-size: 16px;
-        }
-    </style>
+    .btn-toggle {
+      padding: 10px 20px;
+      background-color: #FF6A00;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background 0.3s;
+      align-self: flex-start;
+    }
+
+    .btn-toggle:hover {
+      background-color: #e55a00;
+    }
+
+    .details {
+      display: none;
+      margin-top: 20px;
+      font-size: 0.95em;
+      color: #444;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="logo-container">
-        <img src="img/logo.png" alt="Logo de la web" class="logo" />
+  <div class="container">
+    <div class="imagen"></div>
+    <div class="info-panel">
+      <h1>Spectra UX-30-N</h1>
+      <div class="price">14,99 €</div>
+      <div class="short-desc">
+        Naranja translúcido audaz y vibrante. Energía y personalidad retro-futurista para destacar con espíritu libre bajo el sol.
+      </div>
+      <button class="btn-toggle" onclick="toggleDetails()">Características</button>
+      <div class="details" id="details">
+        <ul>
+          <li><strong>Montura:</strong> TR90 ultraligero, flexible y resistente a impactos.</li>
+          <li><strong>Lentes:</strong> Policarbonato con filtro UV400, protección total frente a rayos UVA y UVB.</li>
+          <li><strong>Polarización:</strong> Reduce reflejos y deslumbramientos para una visión clara y cómoda.</li>
+          <li><strong>Diseño:</strong> Estilizado y ergonómico con acabado translúcido naranja vibrante.</li>
+          <li><strong>Agarre:</strong> Terminales y puente nasal con goma antideslizante, ideales para actividad física y uso diario.</li>
+          <li><strong>Comodidad:</strong> Ajuste ligero para uso prolongado sin molestias.</li>
+        </ul>
+      </div>
     </div>
+  </div>
 
-    <div class="contenido">
-        <img src="img/naranja.png" alt="Gafas Spectra Naranjas" />
-        <div class="descripcion" style="font-family: 'Helvetica Neue', sans-serif; color: #FF6A00; line-height: 1.6; max-width: 700px; margin: auto; padding: 20px;">
-            <h2 style="font-size: 1.4em; font-weight: bold; color: #FF6A00;">🟠 Spectra Naranja – Naranja translúcido</h2>
-            <p style="font-size: 1.1em;">
-                <strong>Audaz y vibrante</strong>. El naranja retro-futurista irradia <strong>energía, personalidad y espíritu libre</strong>, perfecto para quienes se atreven a destacar bajo el sol.
-            </p>
-        </div>
-    </div>
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById("details");
+      details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+  </script>
 
 </body>
 </html>
