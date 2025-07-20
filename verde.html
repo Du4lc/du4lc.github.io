@@ -75,6 +75,52 @@
       color: #444;
       line-height: 1.6;
     }
+
+    @media (max-width: 767px) {
+        .container {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .imagen {
+            flex: none;
+            height: 300px; /* altura adaptada para móvil */
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            border-radius: 0;
+        }
+
+        .info-panel {
+            flex: none;
+            width: 100%;
+            padding: 20px 15px;
+            box-shadow: none;
+        }
+
+        .info-panel h1 {
+            font-size: 1.6em;
+        }
+
+        .info-panel .price {
+            font-size: 1.3em;
+        }
+
+        .info-panel .short-desc {
+            font-size: 1em;
+        }
+
+        .btn-toggle {
+            width: 100%;
+            font-size: 1.1em;
+            padding: 12px 0;
+        }
+
+        .details {
+            font-size: 1em;
+        }
+    }
+
   </style>
 </head>
 <body>
