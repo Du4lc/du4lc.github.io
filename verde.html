@@ -1,81 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Gafas Spectra Verdes</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gafas Spectra Verdes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f4f4f4;
+    }
 
-        .logo-container {
-            width: 100%;
-            padding: 10px 0;
-            background-color: #ffffff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
+    .logo-container {
+      width: 100%;
+      padding: 10px 0;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        .logo {
-            max-height: 80px;
-            width: auto;
-            max-width: 90%;
-        }
+    .logo {
+      max-height: 80px;
+      width: auto;
+      max-width: 90%;
+    }
 
-        .contenido {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
-            gap: 40px;
-        }
+    .contenido {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      gap: 20px;
+    }
 
-        .contenido img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
+    .descripcion {
+      max-width: 600px;
+      text-align: center;
+      color: #2E8B57;
+      margin-bottom: 10px;
+    }
 
-        .descripcion {
-            max-width: 600px;
-            color: #2e7d32; /* verde */
-        }
+    .descripcion h2 {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 0 0 6px;
+      color: #2E8B57;
+    }
 
-        .descripcion h2 {
-            margin-top: 0;
-            font-size: 24px;
-            color: #2e7d32;
-        }
+    .descripcion p {
+      font-size: 1em;
+      line-height: 1.4;
+      margin: 0;
+    }
 
-        .descripcion p {
-            line-height: 1.6;
-            font-size: 16px;
-        }
-    </style>
+    .contenido img {
+      width: 100%;
+      max-width: 650px;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+  </style>
 </head>
 <body>
 
-    <div class="logo-container">
-        <img src="img/logo.png" alt="Logo de la web" class="logo" />
-    </div>
+  <div class="logo-container">
+    <img src="img/logo.png" alt="Logo de la web" class="logo" />
+  </div>
 
-    <div class="contenido">
-        <img src="img/verde.png" alt="Gafas Spectra Verdes" />
-        <div class="descripcion" style="font-family: 'Helvetica Neue', sans-serif; color: #2E8B57; line-height: 1.6; max-width: 700px; margin: auto; padding: 20px;">
-            <h2 style="font-size: 1.4em; font-weight: bold; color: #2E8B57;">🟢 Spectra Verde – Verde translúcido</h2>
-            <p style="font-size: 1.1em;">
-                <strong>Estilo técnico con un toque futurista</strong>. El verde translúcido transmite <strong>frescura, agilidad y enfoque</strong>, ideal para una actitud activa y moderna.
-            </p>
-        </div>
+  <div class="contenido">
+    <div class="descripcion">
+      <h2>🟢 Spectra UX-30 Verde – Verde translúcido</h2>
+      <p><strong>Estilo técnico con un toque futurista</strong>. El verde translúcido transmite <strong>frescura, agilidad y enfoque</strong>, ideal para una actitud activa y moderna.</p>
     </div>
+    <img src="img/verde.png" alt="Gafas Spectra Verdes" />
+  </div>
 
 </body>
 </html>
