@@ -81,31 +81,29 @@
         .container {
             flex-direction: column;
             height: auto;
-            align-items: center; /* Centrado horizontal */
         }
 
         .imagen {
-            height: 280px;
+            flex: none;
+            width: 100%;
+            height: 300px; /* Asegura altura visible */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('img/verde.png'); /* O naranja.png según el archivo */
         }
 
         .info-panel {
-            width: 90%;
-            padding: 25px 20px;
-            align-items: center;
-            text-align: center;
-        }
-
-        .info-panel h1,
-        .info-panel .price,
-        .info-panel .short-desc {
-            text-align: center;
+            flex: none;
+            width: 100%;
+            padding: 20px;
+            box-shadow: none;
         }
 
         .btn-toggle {
-            width: 90%;
-            margin-left: 5%;
-            max-width: 300px;
-            text-align: center;
+            width: auto;
+            max-width: 95%;
+            margin: 10px auto 0 10px; /* desplazamiento a la izquierda sin cortar */
         }
 
         .details {
