@@ -156,7 +156,7 @@
     // Función para obtener stock de la API
     async function obtenerStock() {
       try {
-        const respuesta = await fetch('http://localhost:3000/api/productos');
+        const respuesta = await fetch('https://stock-api-d3ltar3xs-projects.vercel.app/api/productos');
         if (!respuesta.ok) throw new Error('Error en la respuesta de la API');
         
         const productos = await respuesta.json();
