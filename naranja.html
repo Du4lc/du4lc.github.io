@@ -54,6 +54,14 @@
       line-height: 1.5;
     }
 
+    /* Nuevo estilo para mostrar el stock */
+    #stock {
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #007700;
+      font-size: 1.1em;
+    }
+
     .btn-toggle {
         padding: 10px 20px;
         background-color: #FF6A00;
@@ -122,6 +130,10 @@
       <div class="short-desc">
         Naranja translúcido audaz y vibrante. Energía y personalidad retro-futurista para destacar con espíritu libre bajo el sol.
       </div>
+      
+      <!-- Aquí muestra stock -->
+      <div id="stock">Cargando stock...</div>
+
       <button class="btn-toggle" onclick="toggleDetails()">Características</button>
       <div class="details" id="details">
         <ul>
@@ -141,6 +153,32 @@
       const details = document.getElementById("details");
       details.style.display = details.style.display === "block" ? "none" : "block";
     }
+
+    // Función para obtener stock de la API
+    async function obtenerStock() {
+      try {
+        const respuesta = await fetch('http://localhost:3000/api/productos');
+        if (!respuesta.ok) throw new Error('Error en la respuesta de la API');
+        
+        const productos = await respuesta.json();
+
+        // Busca el producto UX-30-N
+        const producto = productos.find(p => p.modelo === 'UX-30-N');
+        const stockDiv = document.getElementById('stock');
+
+        if (producto) {
+          stockDiv.textContent = `Stock disponible: ${producto.stock} unidades`;
+        } else {
+          stockDiv.textContent = 'Producto no encontrado en stock';
+        }
+      } catch (error) {
+        const stockDiv = document.getElementById('stock');
+        stockDiv.textContent = 'Error al cargar stock';
+        console.error('Error al obtener stock:', error);
+      }
+    }
+
+    obtenerStock();
   </script>
 
 </body>

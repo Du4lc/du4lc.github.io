@@ -53,6 +53,14 @@
       line-height: 1.5;
     }
 
+    /* Estilo para mostrar el stock */
+    #stock {
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #2E8B57;
+      font-size: 1.1em;
+    }
+
     .btn-toggle {
       padding: 10px 20px;
       background-color: #2E8B57;
@@ -77,36 +85,36 @@
     }
 
     @media (max-width: 767px) {
-        .container {
-            flex-direction: column;
-            height: auto;
-        }
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
 
-        .imagen {
-            flex: none;
-            width: 100%;
-            height: 300px; /* Asegura altura visible */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-image: url('img/verde.png'); /* O naranja.png según el archivo */
-        }
+      .imagen {
+        flex: none;
+        width: 100%;
+        height: 300px; /* Asegura altura visible */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url('img/verde.png');
+      }
 
-        .info-panel {
-            flex: none;
-            width: 100%;
-            padding: 20px;
-            box-shadow: none;
-        }
+      .info-panel {
+        flex: none;
+        width: 100%;
+        padding: 20px;
+        box-shadow: none;
+      }
 
-        .btn-toggle {
-            width: 68%;
-            margin-left: 8%;
-        }
+      .btn-toggle {
+        width: 68%;
+        margin-left: 8%;
+      }
 
-        .details {
-            text-align: left;
-        }
+      .details {
+        text-align: left;
+      }
     }
 
   </style>
@@ -121,6 +129,10 @@
       <div class="short-desc">
         Verde translúcido con estilo técnico y moderno. Ligereza, agilidad y enfoque visual para un estilo de vida activo.
       </div>
+      
+      <!-- Aquí muestra stock -->
+      <div id="stock">Cargando stock...</div>
+
       <button class="btn-toggle" onclick="toggleDetails()">Características</button>
       <div class="details" id="details">
         <ul>
@@ -140,6 +152,32 @@
       const details = document.getElementById("details");
       details.style.display = details.style.display === "block" ? "none" : "block";
     }
+
+    // Función para obtener stock de la API
+    async function obtenerStock() {
+      try {
+        const respuesta = await fetch('http://localhost:3000/api/productos');
+        if (!respuesta.ok) throw new Error('Error en la respuesta de la API');
+        
+        const productos = await respuesta.json();
+
+        // Busca el producto UX-30-V
+        const producto = productos.find(p => p.modelo === 'UX-30-V');
+        const stockDiv = document.getElementById('stock');
+
+        if (producto) {
+          stockDiv.textContent = `Stock disponible: ${producto.stock} unidades`;
+        } else {
+          stockDiv.textContent = 'Producto no encontrado en stock';
+        }
+      } catch (error) {
+        const stockDiv = document.getElementById('stock');
+        stockDiv.textContent = 'Error al cargar stock';
+        console.error('Error al obtener stock:', error);
+      }
+    }
+
+    obtenerStock();
   </script>
 
 </body>
